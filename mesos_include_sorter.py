@@ -33,7 +33,7 @@ def depth_format(lines):
 def sort_format(lines):
     """Sort `lines` according to Mesos style."""
     def has_non_system_h_include(line):
-        """Detect whether `line` includes a system header."""
+        """Detect whether `line` includes a non-system `*.h` file."""
         non_system_h_files = ['<gtest/gtest.h>', '<gmock/gmock.h>']
         return any([line.count(h) for h in non_system_h_files])
 
